@@ -24,7 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -41,6 +41,7 @@ ul {
   flex-wrap: wrap;
   margin: 10px;
   gap: 30px;
+  list-style-type: none;
 }
 button {
   border-radius: 8px;
@@ -76,4 +77,11 @@ button:focus-visible {
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+.not_found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }

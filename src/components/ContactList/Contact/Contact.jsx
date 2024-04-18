@@ -3,6 +3,9 @@ import s from "./Contact.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
 const Contact = ({ item, handleDeleteContacts }) => {
+  if (!item || !item.name || !item.number) {
+    return null;
+  }
   const { id, name, number } = item;
   return (
     <li className={s.contact}>
