@@ -16,10 +16,7 @@ const LoginPage = () => {
   });
 
   const handleSubmit = (values) => {
-    dispatch(loginThunk(values))
-      .unwrap()
-      .then(() => navigate("/"))
-      .catch(() => toast.error("email or password invalid"));
+    dispatch(loginThunk(values));
   };
 
   const initialValues = {
