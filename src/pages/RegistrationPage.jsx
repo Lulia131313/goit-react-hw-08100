@@ -1,7 +1,8 @@
+import toast, { Toaster } from "react-hot-toast";
 import AuthForm from "../components/AuthForm";
 import { useDispatch } from "react-redux";
 import { registerThunk } from "../redux/auth/operation";
-import toast, { Toaster } from "react-hot-toast";
+
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 
@@ -44,8 +45,9 @@ const RegistrationPage = () => {
         initialValues={initialValues}
         type="register"
         validationSchema={validationSchema}
-      />
-      <Toaster />
+      >
+        <Toaster />
+      </AuthForm>
     </div>
   );
 };

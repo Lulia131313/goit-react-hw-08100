@@ -20,7 +20,7 @@ const ContactList = () => {
   };
 
   return (
-    <ul className={s.contacts}>
+    <ul className="cont">
       {loading && <p>Loading...</p>}
       {filteredData.map((contact) => (
         <Contact

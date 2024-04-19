@@ -12,10 +12,10 @@ const NavBar = () => {
   return (
     <div className={s.header}>
       <Link to="/">React</Link>
-      <p>{user.name}</p>
+      <p>`Welcome {user.email}`</p>
       <ul>
         <li>
-          <NavLink to="/">home</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
           <NavLink to="/contacts">Contacts</NavLink>
@@ -26,7 +26,7 @@ const NavBar = () => {
               <NavLink to="/login">Login</NavLink>
             </li>
             <li>
-              <NavLink to="/RegistrationPage">Register</NavLink>
+              <NavLink to="/register">Register</NavLink>
             </li>
           </>
         )}

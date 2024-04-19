@@ -10,7 +10,7 @@ const AuthForm = ({
   validationSchema,
 }) => {
   return (
-    <div className="formWrapper">
+    <div className="formWrapper flexCenter">
       <Formik
         validationSchema={validationSchema}
         onSubmit={onSubmit}

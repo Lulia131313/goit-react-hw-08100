@@ -1,9 +1,11 @@
-.contacts {
+/* .contacts {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-}
+  margin: 20px;
+
+} */
 .contact {
   display: flex;
   align-items: center;
@@ -23,15 +25,6 @@
     cursor: pointer;
     margin: 30px;
   }
-}
-
-.contact button {
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
 }
 
 .contact button:hover {

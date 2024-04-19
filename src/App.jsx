@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { lazy, useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 
 import Layout from "./components/Loyout";
 import PrivetRoutes from "./Routes/PrivetRoutes";
@@ -25,7 +25,7 @@ const App = () => {
   return isRefreshing ? (
     <Loader />
   ) : (
-    <>
+    <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -56,7 +56,7 @@ const App = () => {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </Suspense>
   );
 };
 
