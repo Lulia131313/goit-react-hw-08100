@@ -1,7 +1,7 @@
 import toast, { Toaster } from "react-hot-toast";
 import AuthForm from "../components/AuthForm";
 import { useDispatch } from "react-redux";
-import { loginThunk } from "../redux/auth/operation";
+import { loginThunk } from "../redux/auth/operations";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 

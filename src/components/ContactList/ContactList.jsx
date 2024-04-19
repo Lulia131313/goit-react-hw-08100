@@ -3,10 +3,7 @@ import s from "./Cont.module.css";
 import Contact from "./Contact/Contact";
 import { selectLoading } from "../../redux/filters/selectors";
 import { useEffect } from "react";
-import {
-  deleteContacts,
-  fetchContacts,
-} from "../../redux/contacts/contactsOps";
+import { deleteContacts, fetchContacts } from "../../redux/contacts/operations";
 import { selectFilteredContacts } from "../../redux/filters/selectors";
 
 const ContactList = () => {

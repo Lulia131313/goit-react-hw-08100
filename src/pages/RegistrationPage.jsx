@@ -2,7 +2,7 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import AuthForm from "../components/AuthForm";
 import { useDispatch } from "react-redux";
-import { registerThunk } from "../redux/auth/operation";
+import { registerThunk } from "../redux/auth/operations";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 

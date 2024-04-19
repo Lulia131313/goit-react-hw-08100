@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import s from "./NavBar.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn, selectUser } from "../../redux/auth/slise";
-import { logoutThunk } from "../../redux/auth/operation";
+import { logoutThunk } from "../../redux/auth/operations";
 import Navigation from "./Navigation";
 import AuthNav from "./AuthNav";
 

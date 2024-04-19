@@ -5,7 +5,7 @@ import { Suspense, lazy, useEffect } from "react";
 import Layout from "./components/Loyout";
 import PrivetRoutes from "./Routes/PrivetRoutes";
 import PublicRoute from "./Routes/PublicRoutes";
-import { refreshThunk } from "./redux/auth/operation";
+import { refreshThunk } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/slise";
 import Loader from "./Loader";
 
