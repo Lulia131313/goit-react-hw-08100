@@ -1,20 +1,19 @@
-// import ContactForm from "./components/ContactForm/ContactForm";
-// import ContactList from "./components/ContactList/ContactList";
-import Layout from "./components/Loyout";
-// import SearchBox from "./components/SearchBox/SearchBox";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ContactsPage from "./pages/ContactsPage";
-import NotFound from "./pages/NotFound";
-import LoginPage from "./pages/LoginPage";
-import RegistrationPage from "./pages/RegistrationPage";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-import { refreshThunk } from "./redux/auth/operation";
+import { lazy, useEffect } from "react";
+
+import Layout from "./components/Loyout";
 import PrivetRoutes from "./Routes/PrivetRoutes";
 import PublicRoute from "./Routes/PublicRoutes";
+import { refreshThunk } from "./redux/auth/operation";
 import { selectIsRefreshing } from "./redux/auth/slise";
 import Loader from "./Loader";
+
+const ContactsPage = lazy(() => import("./pages/ContactsPage"));
+const RegistrationPage = lazy(() => import("./pages/RegistrationPage"));
+const LoginPage = lazy(() => import("./pages/LoginPage"));
+const HomePage = lazy(() => import("./pages/HomePage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
   const dispatch = useDispatch();
