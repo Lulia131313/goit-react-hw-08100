@@ -38,3 +38,20 @@ export const logoutThunk = createAsyncThunk(
     }
   }
 );
+
+export const refreshThunk = createAsyncThunk(
+  "auth/refresh",
+  async (_, thunkApi) => {
+    const savedToken = thunkApi.getState().auth.token;
+    if (!savedToken) {
+      return thunkApi.rejectWithValue("Unable to fetch user");
+    }
+    setToken(savedToken);
+    try {
+      const { data } = await Api.get("/users/current");
+      return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);

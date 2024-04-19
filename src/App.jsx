@@ -8,7 +8,14 @@ import ContactsPage from "./pages/ContactsPage";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { refreshThunk } from "./redux/auth/operation";
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshThunk());
+  }, [dispatch]);
   return (
     <>
       <Routes>
