@@ -1,8 +1,8 @@
-import toast, { Toaster } from "react-hot-toast";
+import React from "react";
+import { ToastContainer, toast } from "react-toastify";
 import AuthForm from "../components/AuthForm";
 import { useDispatch } from "react-redux";
 import { registerThunk } from "../redux/auth/operation";
-
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 
@@ -26,11 +26,13 @@ const RegistrationPage = () => {
     dispatch(registerThunk(values))
       .unwrap()
       .then((data) => {
-        toast.success(`Welcome, ${data.user.name}!`);
+        console.log("ok");
+        toast(`Welcome, ${data.user.name}!`);
         navigate("/");
       })
       .catch(() => toast.error("Credentials invalid"));
   };
+
   const initialValues = {
     name: "",
     email: "",
@@ -38,17 +40,13 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div>
-      <AuthForm
-        title="Register"
-        onSubmit={handleSubmit}
-        initialValues={initialValues}
-        type="register"
-        validationSchema={validationSchema}
-      >
-        <Toaster />
-      </AuthForm>
-    </div>
+    <AuthForm
+      title="Register"
+      onSubmit={handleSubmit}
+      initialValues={initialValues}
+      type="register"
+      validationSchema={validationSchema}
+    />
   );
 };
 

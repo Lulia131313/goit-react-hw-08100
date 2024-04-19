@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { loginThunk } from "../redux/auth/operation";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+
 const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

@@ -37,23 +37,24 @@ const App = () => {
               </PrivetRoutes>
             }
           />
+
+          <Route
+            path="register"
+            element={
+              <PublicRoute>
+                <RegistrationPage />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <PublicRoute>
+                <LoginPage />
+              </PublicRoute>
+            }
+          />
         </Route>
-        <Route
-          path="register"
-          element={
-            <PublicRoute>
-              <RegistrationPage />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="login"
-          element={
-            <PublicRoute>
-              <LoginPage />
-            </PublicRoute>
-          }
-        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
